@@ -1,0 +1,23 @@
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+
+#fullpage{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#sections-container{
+    position: relative;
+    top: 0vh;
+    width: 100%;
+    transition-property: top;
+    transition-duration: 1s;
+}
+
+.section{
+    width: 100%;
+    height: 100vh;
+}
