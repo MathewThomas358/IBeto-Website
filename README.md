@@ -13,6 +13,7 @@ Step 1: Install NVM using this command -
 ```sh
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
 ```
+
 Step 2: Install Node.JS using this command - 
 ```sh
 	nvm install node
