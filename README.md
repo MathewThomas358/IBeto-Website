@@ -2,8 +2,8 @@
 
 Steps to create a server on Linux
 
-*Option #1: Apache Web Serve
-*Option #2: Node.JS http-server
+* Option #1: Apache Web Serve
+* Option #2: Node.JS http-server
 
 ## Option #1: Apache Web Server
 Step 1: Just don't.
