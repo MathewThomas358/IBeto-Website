@@ -1,41 +1,46 @@
-var sections = $("#sections-container").children().length;
-var section = 0;
-var lastScrollTop = 0;
-var scroll = true;
+class FullPage{
 
-var nextSection = ()=>{
-    if(section==sections-1)
-        return;
-    section++;
-    $("#sections-container").css("top", section*(-100) + "vh");
-}
-
-var prevSection = ()=>{
-    if(section==0)
-        return;
-    section--;
-    $("#sections-container").css("top", section*(-100) + "vh");
-}
-
-$(window).bind('mousewheel', (e)=>{
-    if(!scroll)
-        return;
-    scroll = false;
-    setTimeout(function(){ scroll = true }, 1500);
-    console.log(e.originalEvent.wheelDelta);
-    if(e.originalEvent.wheelDelta < 0) {
-        nextSection();
-    } else if(e.originalEvent.wheelDelta > 0) {
-        prevSection();
+    nextSection(){
+        if(this.section==this.sectionsCount-1)
+            return;
+        this.section++;
+        this.sectionsContainer.css("top", this.section*(-100) + "vh");
     }
-});
-console.log("working");
-$(document).keydown(function(event) {
-    console.log('Handler for .keypress() called. - ' + event.keyCode);
-    switch(event.keyCode){
-        case 40:nextSection();
-                break;
-        case 38:prevSection();
-                break;
+
+    prevSection(){
+        if(this.section==0)
+            return;
+        this.section--;
+        this.sectionsContainer.css("top", this.section*(-100) + "vh");
     }
-});
+
+    constructor(element, duration){
+        this.section = 0;
+        this.scroll = true;
+        this.fullpage = element;
+        this.scrollDelay = duration;
+        this.sectionsContainer = this.fullpage.find("#sections-container");
+        this.sectionsCount = this.sectionsContainer.children().length;
+        var fullpageObj = this;
+
+        $(window).bind('wheel', function(e){
+            if(!fullpageObj.scroll)
+                return;
+            fullpageObj.scroll = false;
+            setTimeout(function(){ fullpageObj.scroll = true }, fullpageObj.scrollDelay);
+            if(e.originalEvent.deltaY > 0) {
+                fullpageObj.nextSection();
+            } else if(e.originalEvent.deltaY < 0) {
+                fullpageObj.prevSection();
+            }
+        });
+
+        console.log("working");
+        $(document).bind("keydown", function(e){
+            if(e.keyCode==40)
+                fullpageObj.nextSection();
+            else if(e.keyCode==38)
+                fullpageObj.prevSection();
+        });
+    }
+}
