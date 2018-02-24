@@ -1,6 +1,23 @@
 body{
     margin: 0px;
     overflow: hidden;
+    background: url('/img/night-time-background.jpg');
+    background-size: cover;
+}
+
+h1{
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+p, ul{
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    font-family: Cabin;
+    font-weight: 300;
+    line-height: 30px;
 }
 
 #fullpage{
@@ -20,4 +37,139 @@ body{
 .section{
     width: 100%;
     height: 100vh;
+    font-size: 0px;
+    background: #00185d;
+    background: #202a5f;
+    color: #ffffff;
+    position: relative;
+    padding: 20px;
+}
+
+.section-arrow-center{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+}
+
+@keyframes arrow-bob{
+    0%{
+        transform: translateY(-20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+.section-arrow{
+    color: white;
+    font-size: 70px;
+    animation: arrow-bob 2s ease infinite;
+}
+.section-arrow:hover{
+    cursor: pointer;
+}
+
+.sub-section{
+    height: 100vh;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 100vh;
+}
+
+.ibeto-logo{
+    width: 400px;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.ibeto-desc{
+    width: 600px;
+    margin: auto;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.registration-section{
+    text-align: center;
+}
+
+.step-container{
+    width: 50%;
+    display: inline-block;
+    height: 40vh;
+    text-align: bottom;
+    margin-top: 20px;
+}
+
+.reg-step-img{
+    font-size: 200px;
+}
+
+.step-desc{
+    font-size: 20px;
+}
+
+.hackathon-section{
+    text-align: center;
+}
+
+.hackathon-desc{
+    vertical-align: middle;
+    display: inline-block;
+    text-align: right;
+}
+
+.hackathon-desc > ul{
+    list-style-position: inside;
+    direction: rtl;
+    padding-right: 10px;
+}
+
+.winner-section{
+    padding: 0px;
+}
+
+.winner-display{
+    display: inline-block;
+    transition-duration: 0.5s;
+    height: 100vh;
+    vertical-align: top;
+    overflow: hidden;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    text-align: left;
+}
+
+.team-photo{
+    height: 50vh;
+    display: block;
+    margin: auto;
+}
+
+.winner-know-more, .winner-close{
+    width: 100%;
+    padding: 15px 0px;
+    background: red;
+    display: block;
+    font-size: 28px;
+    text-align: center;
+}
+.winner-close{
+    display: none;
+}
+
+.winner-desc{
+    padding: 15px;
+}
+
+.winner-desc > p{
+    font-size: 14px;
+    text-overflow: ellipsis;
 }

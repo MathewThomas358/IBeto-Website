@@ -17,9 +17,15 @@ eg:- Lets move to section 2. Use this statement
         fullpageObj.move
 */
 
+
 var fullpage = $("#fullpage");
-var delay = 1500;
+var delay = 500;
 var fullpageObj = new FullPage(fullpage, delay);        //FullPage object.... Add all transition functions to this object
+
+$(".section-arrow").click(()=>{
+        fullpageObj.nextSection();
+});
+
 /*
 function protoFunc(){
     console.log("Transition from section 1 to 2");
@@ -32,3 +38,25 @@ function protoFunc2(){
 }
 
 fullpageObj.setTransition("2-1", protoFunc2);*/
+
+
+/* Page Animations */
+$(".winner-know-more").click( (event)=>{
+        var section = $(event.target).parent().parent();
+        var winnerDisplay = $(event.target).parent();
+        section.children().removeClass("col-md-3");
+        section.children().addClass("col-md-2");
+        winnerDisplay.removeClass("col-md-2");
+        winnerDisplay.addClass("col-md-6");
+        winnerDisplay.find(".winner-know-more").css("display", "none");
+        winnerDisplay.find(".winner-close").css("display", "block");
+});
+
+$(".winner-close").click( (event)=>{
+        var section = $(event.target).parent().parent();
+        var winnerDisplay = $(event.target).parent();
+        section.children().removeClass("col-md-2 col-md-6");
+        section.children().addClass("col-md-3");
+        winnerDisplay.find(".winner-know-more").css("display", "block");
+        winnerDisplay.find(".winner-close").css("display", "none");
+});
