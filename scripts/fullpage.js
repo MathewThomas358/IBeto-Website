@@ -6,6 +6,7 @@ class FullPage{
         this.section++;
         this.sectionsContainer.css("top", this.section*(-100) + "vh");
         this.transitionArray[(this.section)+"-"+(this.section+1)]();
+        this.changeMenu();
     }
 
     prevSection(){
@@ -14,6 +15,17 @@ class FullPage{
         this.section--;
         this.sectionsContainer.css("top", this.section*(-100) + "vh");
         this.transitionArray[(this.section+2)+"-"+(this.section+1)]();
+        this.changeMenu();
+    }
+
+    changeMenu(){
+        if(this.section%2 == 0){
+            this.menu.removeClass("menu-1");
+            this.menu.addClass("menu-0");
+        }else{
+            this.menu.removeClass("menu-0");
+            this.menu.addClass("menu-1");
+        }
     }
 
     moveToSection(x){
@@ -39,6 +51,7 @@ class FullPage{
         this.scrollDelay = duration;
         this.sectionsContainer = this.fullpage.find("#sections-container");
         this.sectionsCount = this.sectionsContainer.children().length;
+        this.menu = this.fullpage.find(".menu");
         this.transitionArray = {};
         for(var i=0 ; i<this.sectionsCount ; i++){
             if(i!=0)

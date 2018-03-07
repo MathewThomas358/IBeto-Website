@@ -60,3 +60,20 @@ $(".winner-close").click( (event)=>{
         winnerDisplay.find(".winner-know-more").css("display", "block");
         winnerDisplay.find(".winner-close").css("display", "none");
 });
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js-0', '../assets/particles-0.json', function() {
+        console.log('callback - particles.js config loaded');
+});
+
+particlesJS.load('particles-js-1', '../assets/particles-1.json', function() {
+        console.log('callback - particles.js config loaded');
+});
+
+particlesJS.load('particles-js-2', '../assets/particles-0.json', function() {
+        console.log('callback - particles.js config loaded');
+});
+
+particlesJS.load('particles-js-3', '../assets/particles-1.json', function() {
+        console.log('callback - particles.js config loaded');
+});
