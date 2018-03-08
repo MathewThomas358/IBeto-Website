@@ -43,11 +43,29 @@ p, ul{
     display: inline-block;
     cursor: pointer;
     transition-duration: 0.5s;
+    margin: 10px;
 }
 
 .button-0:hover{
     background: #007500;
     color: #ffffff;
+}
+
+.button-1{
+    background: #007500;
+    padding: 10px 20px;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    letter-spacing: 1px;
+    border-style: solid;
+    color: #ffffff;
+    border-width: 2px;
+    border-color: #007500;
+    border-radius: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    margin: 10px;
 }
 
 #fullpage{
@@ -196,7 +214,7 @@ p, ul{
 }
 
 .steps-container{
-    padding: 200px 0px;
+    padding: 100px 0px 50px;
 }
 
 .step-container{
@@ -207,14 +225,23 @@ p, ul{
     margin-top: 20px;
 }
 
+.step-container > h2{
+    margin-top: 30px;
+}
+
+.step-container > p{
+    width: 700px;
+    margin: auto;
+}
+
 .form-team{
     width: 300px;
     animation: team-revolve 20s linear infinite;
 }
 
 .submit-abstract{
-    width: 300px;
-    animation: team-revolve 20s linear infinite;
+    height: 300px;
+    animation: abstract-bob 4s linear infinite;
 }
 
 .reg-step-img{
@@ -304,5 +331,17 @@ p, ul{
     }
     100%{
         transform: rotate(360deg);
+    }
+}
+
+@keyframes abstract-bob{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
     }
 }
