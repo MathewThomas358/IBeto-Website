@@ -6,7 +6,7 @@ body{
 
 h1{
     font-family: Roboto;
-    font-size: 40px;
+    font-size: 4vh;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -14,26 +14,19 @@ h1{
 
 h2{
     font-family: Josefin Sans;
-    font-size: 35px;
+    font-size: 7vh;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 4.375px;
 }
 
-p, ul{
-    font-size: 16px;
-    letter-spacing: 0.3px;
-    font-family: Cabin;
-    font-weight: 300;
-    line-height: 30px;
-    -webkit-text-stroke: 0.0px #000000;
-}
+
 
 .button-0{
     background: none;
-    padding: 10px 20px;
+    padding: 1vh 1vh;
     font-family: Josefin Sans;
-    font-size: 20px;
+    font-size: 3vh;
     letter-spacing: 1px;
     border-style: solid;
     color: #007500;
@@ -53,9 +46,9 @@ p, ul{
 
 .button-1{
     background: #007500;
-    padding: 10px 20px;
+    padding: 1vh 1vh;
     font-family: Josefin Sans;
-    font-size: 20px;
+    font-size: 3vh;
     letter-spacing: 1px;
     border-style: solid;
     color: #ffffff;
@@ -85,11 +78,24 @@ p, ul{
     padding: 5px 13px;
     border-style: solid;
     border-width: 0px;
-    border-radius: 45px;
+    border-radius: 60%;
+    resize: auto;
+    overflow: auto;
+    max-height:50%;
+    max-width:50%;
+    /*height:8%;
+    width:5%;*/
     transition-duration: 1.5s;
     transition-delay: 0.5s;
 }
-
+.polyline{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; 
+    vertical-align: middle; 
+    overflow: hidden; 
+}
 .menu-0{
     color: #000000;
     background: #007500;
@@ -101,7 +107,7 @@ p, ul{
 }
 
 #sections-container{
-    position: relative;
+    position: relative; 
     top: 0vh;
     width: 100%;
     transition-property: top;
@@ -111,15 +117,31 @@ p, ul{
 
 .particles-js{
     position:absolute;
-    z-index: 0;
+    z-index: 100;
     width:100%;
     height:100vh;
 }
-
+.ibeto-desc > p{
+    width:100%;
+    position:absolute;
+    font-size: 2vh;
+    letter-spacing: 0.01vh;
+    font-family: Cabin;
+    font-weight: 29vh;
+    line-height: 3vh;
+    -webkit-text-stroke: 0.0px #000000;
+}
+.hackathon-desc > p,ul{
+    ont-size: 16px;
+    letter-spacing: 0.2px;
+    font-family: Cabin;
+    font-weight: 300;
+    line-height: 3vh;
+    -webkit-text-stroke: 0.0px #000000;
+}
 .section-0{
     width: 100%;
     height: 100vh;
-    font-size: 0px;
     background: #131116;
     color: #ffffff;
     position: relative;
@@ -161,7 +183,7 @@ p, ul{
 .section-content{
     position: absolute;
     width: 100%;
-    padding: 20px;
+    padding: 10px;
 }
 
 .section-arrow-center{
@@ -176,7 +198,7 @@ p, ul{
 
 .section-arrow{
     color: #007500;
-    font-size: 70px;
+    font-size: 10vh;
     animation: arrow-bob 2s ease infinite;
 }
 .section-arrow:hover{
@@ -189,21 +211,34 @@ p, ul{
     background-size: cover;
 }
 
-.sub-section{
+.sub-section-1{
+    height: 35vh;
+    display: inline-block;
+    vertical-align: middle;
+}
+.sub-section-3 {
     height: 100vh;
     display: inline-block;
     vertical-align: middle;
-    line-height: 100vh;
 }
+.sub-section-3 > p,ul{
+    -webkit-text-stroke: 0.0px #000000;
+
+}
+
 
 .ibeto-logo{
-    width: 400px;
-    vertical-align: middle;
-    display: inline-block;
+    /*width: 400px;*/
+    width:40%;
+    top:55%;
+    right:30%;
+    position:absolute;
+    /*height:auto;*/
+    /*vertical-align: left;*/
+    /*display: inline-block;*/
 }
-
 .ibeto-desc{
-    width: 600px;form-team
+    width: 100%;form-team
     margin: auto;
     vertical-align: middle;
     display: inline-block;
@@ -214,33 +249,40 @@ p, ul{
 }
 
 .steps-container{
-    padding: 100px 0px 50px;
+    padding: 15px 0px 0px;
 }
 
 .step-container{
     width: 50%;
     display: inline-block;
-    height: 40vh;
+    height: 20vh;
     text-align: bottom;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .step-container > h2{
-    margin-top: 30px;
+    margin-top: 0px;
+    font-size: 5vh
 }
 
 .step-container > p{
-    width: 700px;
+    width: 90%;
+    font-size:2vh;
+    line-height:2vh;
     margin: auto;
 }
 
 .form-team{
-    width: 300px;
+    /*#width: 300px;
+    width:40%;*/
+    height:100%;
     animation: team-revolve 20s linear infinite;
 }
 
 .submit-abstract{
-    height: 300px;
+    /*height: 300px;
+    width:100%;*/
+    height:100%;
     animation: abstract-bob 4s linear infinite;
 }
 
@@ -260,9 +302,13 @@ p, ul{
 }
 
 .hackathon-desc{
-    vertical-align: middle;
     display: inline-block;
     text-align: right;
+    z-index: 1;
+    font-size: 2vh;
+    letter-spacing: 0.4px;
+    font-family: Cabin;
+    font-weight: 200;
 }
 
 .hackathon-desc > ul{
