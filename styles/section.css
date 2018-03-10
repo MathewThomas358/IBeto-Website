@@ -6,7 +6,7 @@ body{
 
 h1{
     font-family: Lato;
-    font-size: 40px;
+    font-size: 3rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 5px;
@@ -14,19 +14,19 @@ h1{
 
 h2{
     font-family: Josefin Sans;
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
     letter-spacing: 4.375px;
 }
 
 p, ul{
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 0.3px;
     font-family: Cabin;
     font-weight: 300;
     letter-spacing: 0.4px;
-    line-height: 30px;
+    line-height: 1.6rem;
     -webkit-text-stroke: 0.0px #000000;
 }
 
@@ -190,7 +190,14 @@ p, ul{
     background-size: cover;
 }
 
-.sub-section{
+.sub-section-0, .sub-section-2{
+    height: 100vh;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 100vh;
+}
+
+.sub-section-1{
     height: 100vh;
     display: inline-block;
     vertical-align: middle;
@@ -198,13 +205,15 @@ p, ul{
 }
 
 .ibeto-logo{
-    width: 400px;
+    max-width: 400px;
+    width: 90%;
     vertical-align: middle;
     display: inline-block;
 }
 
 .ibeto-desc{
-    width: 600px;form-team
+    max-width: 600px;
+    width: 100%;
     margin: auto;
     vertical-align: middle;
     display: inline-block;
@@ -215,11 +224,10 @@ p, ul{
 }
 
 .steps-container{
-    padding: 100px 0px 50px;
+    padding: 40px 0px 40px;
 }
 
 .step-container{
-    width: 50%;
     display: inline-block;
     text-align: bottom;
     margin-top: 20px;
@@ -231,17 +239,18 @@ p, ul{
 }
 
 .step-container > p{
-    width: 700px;
     margin: auto;
 }
 
 .form-team{
-    width: 300px;
+    height: 300px;
+    width: auto;
     animation: team-revolve 20s linear infinite;
 }
 
 .submit-abstract{
     height: 300px;
+    width: auto;
     animation: abstract-bob 4s linear infinite;
 }
 
@@ -250,7 +259,7 @@ p, ul{
 }
 
 .step-desc{
-    font-size: 20px;
+    display: inline-block;
 }
 
 .hackathon-section{
@@ -315,6 +324,11 @@ p, ul{
     font-weight: 300;
 }
 
+.contact-misc > i{
+    margin: 5px;
+    font-size: 18px;
+}
+
 .contact-name{
     display: block;
     font-weight: 400;
@@ -347,9 +361,84 @@ p, ul{
         transform: translateY(0px);
     }
     50%{
-        transform: translateY(-50px);
+        transform: translateY(-30px);
     }
     100%{
         transform: translateY(0px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 2rem;
+        line-height: 1.2rem;
+    }
+
+    p{
+        font-size: 0.95rem;
+        line-height: 1.4rem;
+    }
+
+    .menu-0, .menu-1{
+        display:none;
+    }
+
+    .section-0, .section-1{
+        font-size: 10px;
+    }
+
+    .section-content{
+        padding: 20px 5px;
+    }
+    
+    .sub-section-2{
+        line-height: 100vh;
+    }
+
+    .sub-section-0{
+        height: 40vh;
+        line-height: 40vh;
+    }
+
+    .sub-section-1{
+        height: 51vh;
+        line-height: 51vh;
+    }
+
+    .steps-container{
+        padding: 25px 0px;
+    }
+
+    .step-container{
+        padding: 0px;
+        font-size: 0px;
+    }
+
+    .form-team, .submit-abstract{
+        width: 30%;
+        height: auto;
+        vertical-align: middle;
+    }
+
+    .step-desc{
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .step-desc > h2{
+        font-size: 1.5rem;
+    }
+
+    .step-desc > p{
+        font-size: 0.7rem;
+        line-height: 0.9rem;
+    }
+
+    .hack-img{
+        display: none;
+    }
+
+    .contact-card{
+        margin: 15px 0px;
     }
 }
